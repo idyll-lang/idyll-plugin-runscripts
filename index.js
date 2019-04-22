@@ -1,6 +1,5 @@
 const AST = require('idyll-ast');
 
-console.log('initializing plugin');
 const { execSync } = require('child_process');
 const fs = require('fs');
 
@@ -15,9 +14,7 @@ module.exports = (ast) => {
 
   const curTime = new Date().getTime();
 
-  console.log('running plugin');
   return AST.modifyNodesByName(ast, 'codehighlight', (node) => {
-    console.log('found node');
     if (node.properties.language && node.properties.language.value.startsWith('exec:')) {
       const language = node.properties.language.value.replace('exec:', '');
       if (['rscript', 'rstats', 'r'].indexOf(language.toLowerCase()) > -1) {
