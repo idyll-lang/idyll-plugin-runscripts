@@ -1,0 +1,12 @@
+{
+  "name": "idyll-plugin-runscripts",
+  "version": "1.0.0",
+  "description": "Inline script execution for idyll documents",
+  "main": "index.js",
+  "repository": "https://github.com/idyll-lang/idyll-plugin-runscripts",
+  "author": "Matthew Conlen",
+  "license": "MIT",
+  "dependencies": {
+    "idyll-ast": "^2.0.6"
+  }
+}
